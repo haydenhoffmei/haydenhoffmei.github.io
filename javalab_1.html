@@ -64,6 +64,26 @@
         const d = new Date();
         document.getElementById("dateTimeP").innerHTML = d;
       </script>
+      <p>
+        <button id="hoverButt">Hover here to see some JavaScript.</button>
+        <script>
+          $("button#hoverButt").click( function()
+          {
+            $("div#calcBox").toggle();
+          });
+        </script>
+      </p>
+    </div>
+    <div hidden class="boxDiv" id="calcBox">
+      <h3>JavaScript</h3>
+      <pre>
+        <script>
+          $("button#hoverButt").click( function()
+          {
+            $("div#calcBox").toggle();
+          });
+        </script> 
+      </pre>
     </div>
     <div class="boxDiv">
       <h3>About Me</h3>
