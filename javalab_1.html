@@ -67,22 +67,20 @@
       <p>
         <button id="hoverButt">Hover here to see some JavaScript.</button>
         <script>
-          $("button#hoverButt").click( function()
+          $("button#hoverButt").hover( function()
           {
-            $("div#calcBox").toggle();
+            $("div#scriptBox").toggle();
           });
         </script>
       </p>
     </div>
-    <div hidden class="boxDiv" id="calcBox">
+    <div hidden class="boxDiv" id="scriptBox">
       <h3>JavaScript</h3>
       <pre>
-        <script>
-          $("button#hoverButt").click( function()
+          $("button#hoverButt").hover( function()
           {
-            $("div#calcBox").toggle();
+            $("div#scriptBox").toggle();
           });
-        </script> 
       </pre>
     </div>
     <div class="boxDiv">
