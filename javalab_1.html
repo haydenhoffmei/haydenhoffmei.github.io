@@ -49,6 +49,21 @@
       <p>This page is the for the second mini-proejct of the course, and the third version of this HTML page.<br />
         You can find the first version <a href="lab4.html">here</a>. The index can be found <a href="index.html">here</a>.
       </p>
+      <p>
+        <button id="dateTime">Click here for the date and time.</button>
+        <script>
+          $("button#dateTime").click( function()
+          {
+            $("p#dateTimeP").toggle();
+          })
+        </script>
+      </p>
+      <p hidden id="dateTimeP">
+      </p>
+      <script>
+        const d = new Date();
+        document.getElementById("dateTimeP").innerHTML = d;
+      </script>
     </div>
     <div class="boxDiv">
       <h3>About Me</h3>
@@ -58,10 +73,11 @@
         competitve <acronym title="Brazilian Jiu Jitsu">BJJ</acronym>, which is a type of grappling mixed martial art. I also enjoy<br />
         nature, geography, and computer games.</p>
       <p>
-      <button id="hidePics">Click here to toggle pictures</button>
+      <button id="hidePics">Click here to toggle pictures.</button>
     </p>
       <script>
-        $("button#hidePics").click( function() {
+        $("button#hidePics").click( function()
+        {
           $(".picture").toggle();
         });
       </script>
