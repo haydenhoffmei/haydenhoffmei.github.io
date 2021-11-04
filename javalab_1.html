@@ -87,8 +87,8 @@
     </div>
     <div class="boxDiv">
     <h3>Classes</h3>
-    <p>Here are the classes I'm taking this semester</p>
-      <table class="table">
+    <p id=tableP>Hover over this text to see what classes I am taking!</p>
+      <table hidden class="table">
         <tr>
           <th>Class Name</th>
           <th>Time</th>
@@ -110,6 +110,12 @@
           <td>Asynchronous</td>
         </tr>
       </table>
+    <script>
+      $("p#tableP").hover( function()
+      {
+        $(".table").toggle();
+      });
+    </script>
     </div>
     <div class="boxDiv">
       <h3>Contact</h3>
