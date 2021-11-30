@@ -38,6 +38,7 @@
         var guesses = 10; // the number of guesses left
         var guessed  = []; // these are the letters that have already been guessed
         var finished = false; // change to true when the game is finished
+        var guess = false;
 
         $("#guesses").html(guesses);
         $("#word").html(blanks);
@@ -55,8 +56,13 @@
           } else {
 
             guessed = guessed + letter;
-            if (letter != word){
-              guesses = guesses - 1;
+            for (l of word){
+              if (l == letter){
+                guess = true;
+              }
+            }
+            if (guess == false){
+              guesses = guesses + 1;
             }
             $("#guesses").html(guesses);
             if (guesses <= 0){
