@@ -55,6 +55,9 @@
           } else {
 
             guessed = guessed + letter;
+            if (letter != l of word) {
+              guesses = guesses - 1;
+            }
             $("#guesses").html(guesses);
             if (guesses <= 0){
               $("#messages").text("Out of guesses! You lose!");
@@ -69,9 +72,6 @@
                        blanks.substring((count+1),blanks.length);
             }
             count = count + 1;
-            if (count == 0){
-              guesses = guesses - 1;
-            }
           }
 
           $("#word").html(blanks);
