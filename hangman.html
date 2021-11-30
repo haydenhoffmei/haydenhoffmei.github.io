@@ -52,10 +52,10 @@
             guessed = guessed + letter;
             for (l of word){
               if (l == letter){
-                guess = 1;
+                guess = guess + 1;
               }
             }
-            if (guess = 0){
+            if (guess <= 0){
               guesses = guesses - 1;
             }
             $("#guesses").html(guesses);
