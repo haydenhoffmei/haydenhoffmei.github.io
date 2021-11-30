@@ -49,8 +49,8 @@
 
           $("#"+letter).css({"cursor":"not-allowed","opacity":"0.6"});
 
-          //if (guessed.includes(letter)){
-            //$("#messages").text("The Letter "+letter+" has already been guessed.");
+          if (guessed.includes(letter)){
+            $("#messages").text(" ");
           } else {
 
             guessed = guessed + letter;
