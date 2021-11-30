@@ -47,7 +47,7 @@
           var letter = $(e.target).text();
           console.log("clicked on", letter);
 
-          $("#"+letter).css("text-decoration", "opacity: 0.6");
+          $("#"+letter).css("cursor":"not-allowed","opacity":"0.6");
 
           if (guessed.includes(letter)){
             $("#messages").text("The Letter "+letter+" has already been guessed.");
