@@ -33,7 +33,8 @@
       // $(document) is the jQuery reference to the whole web page
       $(document).ready( function() {
         // put your javascript here
-        var word =   "h a n g m a n"; // the word to guess
+        var words =   ["c l i m a t e","f e d e r a l","k i n g d o m","p a c k a g e","s u r g e r y","v e h i c l e"];
+        var word = words[math.floor(math.random()*items.length)];
         var blanks = "- - - - - - -"; // this variable holds the temporary information
         var guesses = 10; // the number of guesses left
         var guessed  = []; // these are the letters that have already been guessed
