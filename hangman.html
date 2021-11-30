@@ -5,7 +5,8 @@
   <style>
     #worddis {font-size: 26pt; width: 50%; margin-left: 200px; margin-top: 100px;}
     #game {font-size: 22pt; width: 50%; margin-left: 200px; margin-top: 100px;}
-    #letterbutt {font-size: 18pt; width: 90%; margin-left: 200px; margin-top: 100px;}
+    #letterlist {font-size: 18pt; width: 90%; margin-left: 200px; margin-top: 100px;}
+    #letter {}
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
@@ -72,9 +73,9 @@
   <p>There are <span id="guesses"></span> guesses left.</p>
   <p><i>Click on a letter below to play.</i></p>
   </div>
-  <div id="letterbutt">
+  <div id="letterlist">
   <p>
-    <span class="letter" id="a">a</span>
+    <button class="letter" id="a">a</button>
     <span class="letter" id="b">b</span>
     <span class="letter" id="c">c</span>
     <span class="letter" id="d">d</span>
