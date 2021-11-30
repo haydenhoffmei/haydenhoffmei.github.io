@@ -67,10 +67,11 @@
             if (l == letter){
               blanks = blanks.substring(0, count) + letter +
                        blanks.substring((count+1),blanks.length);
-            } if (l != letter) {
-              guesses = guesses - 1;
             }
             count = count + 1;
+          }
+          if (count == 0){
+            guesses = guesses - 1;
           }
 
           $("#word").html(blanks);
