@@ -26,7 +26,7 @@
     .btn-group .letter:hover {
       background-color: #003366;
     }
-    #playagain
+    #playagain {text-align: center;}
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
@@ -89,7 +89,7 @@
           if (!blanks.includes("-")){
             finished = true;
             $("#messages").text("You won!");
-            $("#playagain").show();
+            $("#playagain").toggle();
           }
         });
 
@@ -138,5 +138,5 @@
   <div id="messages">
   <p id="messages"></p>
   </div>
-  <button id=#playagain onClick="window.location.reload();">Play Again</button>
+  <button hidden class=#playagain onClick="window.location.reload();">Play Again</button>
 </body>
