@@ -37,39 +37,53 @@
       $(document).ready( function() {
         // put your javascript here
         var words =   ["c l i m a t e","f e d e r a l","k i n g d o m","p a c k a g e","s u r g e r y","v e h i c l e"];
-        var word = words[Math.floor(Math.random()*words.length)];
+        var word = words[Math.floor(Math.random()*words.length)]; //picks a word from the words array at random
         var blanks = "- - - - - - -"; // this variable holds the temporary information
         var guesses = 10; // the number of guesses left
         var guessed  = []; // these are the letters that have already been guessed
         var finished = false; // change to true when the game is finished
-        var guess = 0;
+        var guess = 0; // var used to determine whether the guess was true or false
 
         $("#guesses").html(guesses);
         $("#word").html(blanks);
 
+        //function executed when a letter is clicked
         $(".letter").click(function(e){
+          //function returns when finished = true
           if (finished) { return; }
 
+          //grabs the letter, prints it into console
           var letter = $(e.target).text();
           console.log("clicked on", letter);
 
+          //changes the button so the user knows when a letter is guessed
           $("#"+letter).css({"cursor":"not-allowed","opacity":"0.6"});
 
+          //left this in because removing it broke the code :|
           if (guessed.includes(letter)){
             $("#messages").text(" ");
           } else {
-
+            /*updates array to include guessed letters, probably don't need
+            need this part of the code because the if statement for the guessed
+            letters isn't used for anything but see prior comment*/
             guessed = guessed + letter;
+            /*this section updates the guess variable based on if the guess was
+            correct or not using the same loop strucutre as below*/
             for (l of word){
               if (l == letter){
                 guess = guess + 1;
               }
             }
+            /*this checks the guess variable to update the guess count,
+            basically if the user guesses correct, they don't lose a guess, if
+            they guess incorrect the guess count goes down*/
             if (guess <= 0){
               guesses = guesses - 1;
+            //resets the guess variable
             } else if (guess > 0) {
               guess = 0;
             }
+            //if guesses <= 0 you lose
             $("#guesses").html(guesses);
             if (guesses <= 0){
               $("#messages").text("Out of guesses! You lose!");
@@ -77,7 +91,7 @@
               finished = true;
             }
           }
-
+          //for loop used to see if the letter is correct
           var count = 0;
           for (l of word){
             if (l == letter){
@@ -86,9 +100,10 @@
             }
             count = count + 1;
           }
-
+          //updates the blanks
           $("#word").html(blanks);
 
+          //if there are no blanks you win
           if (!blanks.includes("-")){
             finished = true;
             $("#messages").text("You won!");
