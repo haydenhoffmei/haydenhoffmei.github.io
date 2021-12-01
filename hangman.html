@@ -73,6 +73,7 @@
             $("#guesses").html(guesses);
             if (guesses <= 0){
               $("#messages").text("Out of guesses! You lose!");
+              $(".playagain").toggle();
               finished = true;
             }
           }
