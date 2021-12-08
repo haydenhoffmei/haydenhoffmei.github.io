@@ -17,6 +17,7 @@
                            [39.748473, -105.002487], [39.740283, -104.999037]],
                            {color: 'blue', weight: 4}).addTo(map); */
     myDataPoint.bindPopup("<h3>Gemini Fitness and Combat</h3><p>Englewood, CO<br>Information about Gemini Fitness and Combat.</p>");
+    var popup = L.popup();
     function onMapClick(e){
       popup
       .setLatLng(e.latlng)
