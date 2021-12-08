@@ -21,7 +21,7 @@
   </script>
   <script>
     $(document).ready(function(){
-    var map = L.map('map',{ center: [39.743218, -105.004568], zoom: 20});
+    var map = L.map('map',{ center: [39.743218, -105.004568], zoom: 15});
     var defaultBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
     var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
     var myArea = L.polygon([[39.740652, -105.010233], [39.743218, -105.011864],
