@@ -6,8 +6,9 @@
 </head>
 <body>
   <!-- Our web map and content will go here -->
-  <div id="map" style="width: 960px; height: 540px; align: center;"></div>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <div id="map" style="width: 960px; height: 540px;"></div>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="">
+  </script>
   <script>
     var map = L.map('map',{ center: [39.6386028371572, -104.98783667561018], zoom: 14});
     var defaultBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
@@ -15,7 +16,7 @@
     /* var myArea = L.polygon([[39.740652, -105.010233], [39.743218, -105.011864],
                            [39.748473, -105.002487], [39.740283, -104.999037]],
                            {color: 'blue', weight: 4}).addTo(map); */
-    myDataPoint.bindPopup("This is Gemini Fitness and Combat.");
+    myDataPoint.bindPopup("<h3>Auraria Library</h3><p>Denver, CO<br>Information about Auraria Library.</p>");
   </script>
 </body>
 </html>
