@@ -37,9 +37,10 @@
     var defaultBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
 
 
-    var basemaps = {"Default Basemap:": defaultBase};
-    var overlaymaps = { };
-    var layerMenu = L.control.layers(basemaps, overlaymaps).addTo(map);
+    var basemaps = {"Default Basemap:": defaultBase,
+                    "Stamen Watercolor": Stamen_Watercolor};
+    var overlays = { };
+    var layerMenu = L.control.layers(basemaps, overlays).addTo(map);
 
     //variable declarations for auraria library point and campus polygon
     var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
