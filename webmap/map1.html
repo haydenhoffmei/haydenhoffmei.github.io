@@ -28,7 +28,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
   </script>
   <script>
+
+    //stop the script from loading until the page is fully loaded
     $(document).ready(function(){
+
+    //
     var map = L.map('map',{ center: [39.743218, -105.004568], zoom: 16});
     var defaultBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
     var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
