@@ -92,15 +92,17 @@
       layerMenu.addOverlay(buildings, "Buildings");
     });
 
+    //lightrail variable dec
     var lightrail;
 
-    //calls lightrail.json
+    //calls lightrail.json, gives lightrail popups
     $.getJSON("lightrail.json", function(data){
       lightrail = L.geoJson(data, {
         onEachFeature: function(feature, layer){
           layer.bindPopup("Stop name: " + feature.properties.NAME);
         }
       })
+      //adds lightrail stops to layer menu
       layerMenu.addOverlay(lightrail, "Lightrail Stops");
     });
 
