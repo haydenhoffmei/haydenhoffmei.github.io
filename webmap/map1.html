@@ -83,6 +83,8 @@
       layerMenu.addOverlay(buildings, "Buildings");
     });
 
+    var lightrail;
+
     //calls lightrail.json
     $.getJSON("lightrail.json", function(data){
       lightrail = L.geoJson(data, {
