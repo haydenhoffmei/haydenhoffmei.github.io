@@ -32,14 +32,20 @@
     //stop the script from loading until the page is fully loaded
     $(document).ready(function(){
 
-    //
+    //variable declarations for map, basemap
     var map = L.map('map',{ center: [39.743218, -105.004568], zoom: 16});
     var defaultBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+
+    //variable declarations for auraria library point and campus polygon
     var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
     var myArea = L.polygon([[39.740652, -105.010233], [39.743218, -105.011864],
                            [39.748473, -105.002487], [39.740283, -104.999037]],
                            {color: 'blue', weight: 4}).addTo(map);
+
+    //information popup for library var
     myDataPoint.bindPopup("<h3>Auraria Library</h3><p>Denver, CO<br>Information about Auraria Library.</p>");
+
+    //function that gives user latlng popup when map is clicked
     var popup = L.popup();
     function onMapClick(e){
       popup
@@ -48,13 +54,24 @@
       .openOn(map);
     }
     map.on('click', onMapClick);
+
+    //building variable dec
+    var buildings;
+
+    //calls buildings.json, gives buildings popups
     $.getJSON("buildings.json", function(data){
       buildings = L.geoJson(data, {
         onEachFeature: function(feature, layer){
           layer.bindpopup("Building type: " + feature.properties.BLDG_TYPE + "<br>Building Height: " + feature.properties.BLDG_HEIGH + "<br>Ground Elevation: " + feature.properties.GROUND_ELE);
         }
-      })
+      }).addTo(map);
     });
+
+    $.getJSON("lightrail.json", function(data){
+      myDataVariable = L.geoJson(data).addTo(map);
+    });
+
+
     });
   </script>
 </body>
