@@ -36,6 +36,11 @@
     var map = L.map('map',{ center: [39.743218, -105.004568], zoom: 16});
     var defaultBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
 
+
+    var basemaps = {"Default Basemap:", defaultBase};
+    var overlaymaps = { };
+    var layerMenu = L.control.layers(basemap, overlapmaps).addTo(map);
+
     //variable declarations for auraria library point and campus polygon
     var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
     var myArea = L.polygon([[39.740652, -105.010233], [39.743218, -105.011864],
@@ -62,11 +67,12 @@
     $.getJSON("buildings.json", function(data){
       buildings = L.geoJson(data, {
         onEachFeature: function(feature, layer){
-          layer.bindPopup("Building type: " + feature.properties.BLDG_TYPE + 
+          layer.bindPopup("Building type: " + feature.properties.BLDG_TYPE +
           "<br>Building Height: " + feature.properties.BLDG_HEIGH +
           "<br>Ground Elevation: " + feature.properties.GROUND_ELE);
         }
-      }).addTo(map);
+      })
+      layerMenu.addOverlay(buildings, "Buildings");
     });
 
     $.getJSON("lightrail.json", function(data){
