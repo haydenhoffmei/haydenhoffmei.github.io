@@ -47,9 +47,11 @@
     var overlays = { };
     var layerMenu = L.control.layers(basemaps, overlays).addTo(map);
 
-    //variable declarations for auraria library point and campus polygon
+    //variable declaration for auraria library point
     //not being used anymore
     //var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
+
+    //var dec for auraria polygon
     var myArea = L.polygon([[39.740652, -105.010233], [39.743218, -105.011864],
                            [39.748473, -105.002487], [39.740283, -104.999037]],
                            {color: 'blue', weight: 4}).addTo(map);
