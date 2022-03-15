@@ -1,11 +1,16 @@
-# Draco
-A free PSD & HTML resume template.
-See the demo [here](http://draco.afnizarnur.com/) and download the latest release [here](https://github.com/afnizarnur/draco/releases).
-![Draco](https://cloud.githubusercontent.com/assets/4648648/26038614/72fe3772-3936-11e7-8f88-3781aea67bdc.png)
+# [Personal: HTML5 website template](http://buckymaler.com/featured-work/personal)
 
-## License
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
+Personal is a modern and bold website template suited perfectly for a UI/UX Design professional's portfolio.
 
-Draco is licensed under Creative Commons [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Which means that you are free to copy and redistribute the material in any medium or format and remix, transform, and build upon the material.
+The original PSD is included and was provided by [Web Donut](http://webdonut.net)
 
-This template is designed and developed by Afnizar Nur Ghifari.
+This project was developed with HTML5, Sass, jQuery, TweenLite, and ScrollMagic.
+
+Performance basics are covered: assets are minified into single CSS and JS files, and the images are optimized.
+
+[LIVE PREVIEW](http://buckymaler.com/featured-work/personal)
+
+## Misc:
+
+* Follow Bucky: [Twitter](https://twitter.com/BuckyMaler), [GitHub](https://github.com/BuckyMaler)
+* Follow Web Donut: [Twitter](https://twitter.com/@thewebdonut), [Dribbble](https://dribbble.com/WebDonut)
