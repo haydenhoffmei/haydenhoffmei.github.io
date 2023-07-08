@@ -6,8 +6,8 @@
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 1652px;
-  width: 1440px;
+  /* height: 1652px; */
+  /* width: 1440px; */
 }
 
 .index .navbar-link-container {
